@@ -31,15 +31,15 @@
             route: '/cards',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/cards.html'}
         },
-        'Combobox':
+        'Checkbox':
         {
-            route: '/combobox',
-                config: {controller: 'comboboxCtrl', templateUrl:'partials/combobox.html'}
+            route: '/checkbox',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/checkbox.html'}
         },
-        'Tooltip':
+        'Chips':
         {
-            route: '/tooltip',
-                config: {controller: 'tooltipCtrl', templateUrl:'partials/tooltip.html'}
+            route: '/chips',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/chips.html'}
         },
         'Typeahead':
         {
@@ -310,6 +310,61 @@ angular.module('uiMaterial').controller('CardsCtrl', function($scope) {
         $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
         $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
 });;/**
+ * Created by Mikhail on 3/9/2017.
+ */
+angular.module('uiMaterial').controller('CheckboxCtrl', function($scope) {
+    $scope.data = {};
+    $scope.data.cb1 = true;
+    $scope.data.cb2 = false;
+    $scope.data.cb3 = false;
+    $scope.data.cb4 = false;
+    $scope.data.cb5 = false;
+});;/**
+ * Created by Mikhail on 3/9/2017.
+ */
+(function () {
+    'use strict';
+    angular
+        .module('uiMaterial')
+        .config(['$mdIconProvider', function($mdIconProvider) {
+            $mdIconProvider.icon('md-close', 'img/icons/ic_close_24px.svg', 24);
+        }])
+        .controller('ChipsCtrl', DemoCtrl);
+
+    function DemoCtrl ($timeout, $q) {
+        var self = this;
+
+        self.readonly = false;
+
+        // Lists of fruit names and Vegetable objects
+        self.fruitNames = ['Apple', 'Banana', 'Orange'];
+        self.roFruitNames = angular.copy(self.fruitNames);
+        self.editableFruitNames = angular.copy(self.fruitNames);
+
+        self.tags = [];
+        self.vegObjs = [
+            {
+                'name' : 'Broccoli',
+                'type' : 'Brassica'
+            },
+            {
+                'name' : 'Cabbage',
+                'type' : 'Brassica'
+            },
+            {
+                'name' : 'Carrot',
+                'type' : 'Umbelliferous'
+            }
+        ];
+
+        self.newVeg = function(chip) {
+            return {
+                name: chip,
+                type: 'unknown'
+            };
+        };
+    }
+})();;/**
  * Created by Mikhail on 1/2/2017.
  */
 (function() {

@@ -31,15 +31,15 @@
             route: '/cards',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/cards.html'}
         },
-        'Combobox':
+        'Checkbox':
         {
-            route: '/combobox',
-                config: {controller: 'comboboxCtrl', templateUrl:'partials/combobox.html'}
+            route: '/checkbox',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/checkbox.html'}
         },
-        'Tooltip':
+        'Chips':
         {
-            route: '/tooltip',
-                config: {controller: 'tooltipCtrl', templateUrl:'partials/tooltip.html'}
+            route: '/chips',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/chips.html'}
         },
         'Typeahead':
         {
