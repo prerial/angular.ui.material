@@ -21,15 +21,15 @@
             route: '/bottom-sheet',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/bottomsheet.html'}
         },
-        'ViewportResizer':
+        'Buttons':
         {
-            route: '/viewport-resizer',
-                config: {controller: 'viewPortResizeCtrl', templateUrl:'partials/viewport-resizer.html'}
+            route: '/buttons',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/buttons.html'}
         },
-        'Notifications':
+        'Cards':
         {
-            route: '/notifications',
-                config: {controller: 'notificationsCtrl', templateUrl:'partials/notifications.html'}
+            route: '/cards',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/cards.html'}
         },
         'Combobox':
         {
@@ -50,11 +50,6 @@
         {
             route: '/gridtag',
                 config: {controller: 'gridtagCtrl', templateUrl:'partials/gridtag.html'}
-        },
-        'Buttons':
-        {
-            route: '/buttons',
-                config: {controller: 'ButtonsCtrl', templateUrl:'partials/buttons.html'}
         },
         'Form':
         {

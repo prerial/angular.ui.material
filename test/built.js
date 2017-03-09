@@ -21,15 +21,15 @@
             route: '/bottom-sheet',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/bottomsheet.html'}
         },
-        'ViewportResizer':
+        'Buttons':
         {
-            route: '/viewport-resizer',
-                config: {controller: 'viewPortResizeCtrl', templateUrl:'partials/viewport-resizer.html'}
+            route: '/buttons',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/buttons.html'}
         },
-        'Notifications':
+        'Cards':
         {
-            route: '/notifications',
-                config: {controller: 'notificationsCtrl', templateUrl:'partials/notifications.html'}
+            route: '/cards',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/cards.html'}
         },
         'Combobox':
         {
@@ -50,11 +50,6 @@
         {
             route: '/gridtag',
                 config: {controller: 'gridtagCtrl', templateUrl:'partials/gridtag.html'}
-        },
-        'Buttons':
-        {
-            route: '/buttons',
-                config: {controller: 'ButtonsCtrl', templateUrl:'partials/buttons.html'}
         },
         'Form':
         {
@@ -294,6 +289,27 @@ angular.module('uiMaterial')
 
     });
 ;/**
+ * Created by Mikhail on 3/9/2017.
+ */
+angular.module('uiMaterial').controller('ButtonsCtrl', function($scope) {
+    $scope.title1 = 'Button';
+    $scope.title4 = 'Warn';
+    $scope.isDisabled = true;
+
+    $scope.googleUrl = 'http://google.com';
+
+});;/**
+ * Created by Mikhail on 3/9/2017.
+ */
+angular.module('uiMaterial').controller('CardsCtrl', function($scope) {
+        $scope.imagePath = 'img/washedout.png';
+    })
+    .config(function($mdThemingProvider) {
+        $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
+        $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
+        $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
+        $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
+});;/**
  * Created by Mikhail on 1/2/2017.
  */
 (function() {

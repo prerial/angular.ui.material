@@ -10,6 +10,8 @@
                 .when(navigation['Home'].route, navigation['Home'].config)
                 .when(navigation['Autocomplete'].route, navigation['Autocomplete'].config)
                 .when(navigation['BottomSheet'].route, navigation['BottomSheet'].config)
+                .when(navigation['Buttons'].route, navigation['Buttons'].config)
+                .when(navigation['Cards'].route, navigation['Cards'].config)
 /*
                 .when(navigation['ViewportResizer'].route, navigation['ViewportResizer'].config)
                 .when(navigation['Notifications'].route, navigation['Notifications'].config)
