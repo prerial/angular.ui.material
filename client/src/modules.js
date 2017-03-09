@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module("common", []);
-    angular.module('uiMaterial', ['ngRoute', 'ngResource', 'ngMaterial','common'])
+    angular.module('uiMaterial', ['ngRoute', 'ngResource', 'ngMessages', 'ngMaterial','common'])
         .config( ['$routeProvider', 'Navigation', function($routeProvider, navigation) {
 
             $routeProvider
@@ -12,6 +12,8 @@
                 .when(navigation['BottomSheet'].route, navigation['BottomSheet'].config)
                 .when(navigation['Buttons'].route, navigation['Buttons'].config)
                 .when(navigation['Cards'].route, navigation['Cards'].config)
+                .when(navigation['Checkbox'].route, navigation['Checkbox'].config)
+                .when(navigation['Chips'].route, navigation['Chips'].config)
 /*
                 .when(navigation['ViewportResizer'].route, navigation['ViewportResizer'].config)
                 .when(navigation['Notifications'].route, navigation['Notifications'].config)
