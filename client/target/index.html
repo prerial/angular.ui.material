@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="uiMaterial">
+<head>
+
+    <title>Sports Store</title>
+
+<!-- Styles -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.css"  rel='stylesheet' />
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.css" rel='stylesheet' />
+    <link href="/bower_components/angular-material/angular-material.css" rel='stylesheet' />
+    <link href="/css/main.css" rel='stylesheet' />
+    <!-- Libraries -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+
+    <script src="js/main.js"></script>
+
+</head>
+
+<body ng-controller="uiMaterialAppCtrl">
+
+<div class="topcontainer">
+
+    <div style="float:left;margin:80px 60px">
+        <ul class="pre-nav">
+            <li class="pre-nav-item"><div><a href="#/">Home</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/autocomplete">Autocomplete</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/bottom-sheet">Bottom Sheet</a></div></li>
+<!--
+            <li class="pre-nav-item"><div><a href="#/accordion">Accordion</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/tabs">Tabs</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/combobox">Combobox</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/modal">Modal Window</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/notifications">Notifications</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/gridtag">Grid Tag</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/tooltip">Tooltip</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/typeahead">Typeahead</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/buttons">Bootstrap Buttons</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/form">Form</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/context-menu">Context Menu</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/switch">Switch</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/badge">Badge</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/icons">CSS Components</a></div></li>
+            <li class="pre-nav-item"><div><a href="#/transitions">CSS3 Transitions</a></div></li>
+-->
+        </ul>
+
+    </div>
+
+    <div ng-view autoscroll="true" class="ngview"></div>
+
+</div>
+
+</body>
+</html>
