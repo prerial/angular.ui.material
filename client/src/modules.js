@@ -3,8 +3,8 @@
 
     angular.module("common", []);
     angular.module('uiMaterial', ['ngRoute', 'ngResource', 'ngMessages', 'ngMaterial','common'])
-        .config( ['$routeProvider', 'Navigation', function($routeProvider, navigation) {
-
+        .config( ['$routeProvider', 'Navigation', 'DEMOS', function($routeProvider, navigation, demos ) {
+            var array = demos;
             $routeProvider
 
                 .when(navigation['Home'].route, navigation['Home'].config)
