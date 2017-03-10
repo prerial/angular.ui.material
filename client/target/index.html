@@ -2,13 +2,13 @@
 <html ng-app="uiMaterial">
 <head>
 
-    <title>Sports Store</title>
+    <title>Angular Material</title>
 
 <!-- Styles -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.css"  rel='stylesheet' />
     <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.css" rel='stylesheet' />
     <link href="/bower_components/angular-material/angular-material.css" rel='stylesheet' />
-    <link href="/css/main.css" rel='stylesheet' />
+    <link href="/css/docs.css" rel='stylesheet' />
     <!-- Libraries -->
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/angular-route/angular-route.min.js"></script>
@@ -22,43 +22,56 @@
 
 </head>
 
-<body ng-controller="uiMaterialAppCtrl">
+<body ng-controller="uiMaterialAppCtrl" class="docs-body layout-row" layout="row" ng-cloak aria-label="Angular Material Docs">
 
-<div class="topcontainer">
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                md-component-id="left" hide-print
+                md-is-locked-open="$mdMedia('gt-sm')">
 
-    <div style="float:left;margin:80px 60px">
-        <ul class="pre-nav">
-            <li class="pre-nav-item"><div><a href="#/">Home</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/autocomplete">Autocomplete</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/bottom-sheet">Bottom Sheet</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/buttons">Buttons</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/cards">Cards</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/checkbox">Checkbox</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/chips">Chips</a></div></li>
-<!--
-            <li class="pre-nav-item"><div><a href="#/accordion">Accordion</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/tabs">Tabs</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/combobox">Combobox</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/modal">Modal Window</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/notifications">Notifications</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/gridtag">Grid Tag</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/tooltip">Tooltip</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/typeahead">Typeahead</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/buttons">Bootstrap Buttons</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/form">Form</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/context-menu">Context Menu</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/switch">Switch</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/badge">Badge</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/icons">CSS Components</a></div></li>
-            <li class="pre-nav-item"><div><a href="#/transitions">CSS3 Transitions</a></div></li>
--->
+        <header class="nav-header">
+            <a ng-href="/" class="docs-logo">
+                <img src="img/icons/angular-logo.svg" alt="" height="200"/>
+                <h1 class="docs-logotype md-heading">Angular Material</h1>
+            </a>
+        </header>
+
+        <md-content flex role="navigation">
+        <ul class="docs-menu">
+            <li ng-repeat="section in menu.sections" class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}">
+                <h2 class="menu-heading md-subhead" ng-if="section.type === 'heading'" id="heading_{{ section.name }}">
+                    {{section.name}}
+                </h2>
+                <menu-link section="section" ng-if="section.type === 'link' && !section.hidden"></menu-link>
+
+                <menu-toggle section="section" ng-if="section.type === 'toggle' && !section.hidden"></menu-toggle>
+
+                <ul ng-if="section.children" class="menu-nested-list">
+                    <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}">
+                        <menu-link section="child" ng-if="child.type === 'link'"></menu-link>
+
+                        <menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>
+                    </li>
+                </ul>
+            </li>
         </ul>
+        </md-content>
+    </md-sidenav>
+
+    <div layout="column" tabIndex="-1" role="main" flex>
+    <md-content md-scroll-y layout="column" flex>
+        <div ng-view layout-padding flex="noshrink" class="docs-ng-view"></div>
+
+        <md-button class="md-fab md-fab-bottom-right docs-scroll-fab"
+                   docs-scroll-class="scrolling"
+                   ng-click="scrollTop()"
+                   aria-label="Back to Top">
+            <md-tooltip md-direction="top">Back to Top</md-tooltip>
+            <md-icon md-svg-src="img/icons/ic_arrow_up_24px.svg"></md-icon>
+        </md-button>
+
+    </md-content>
 
     </div>
-
-    <div ng-view autoscroll="true" class="ngview"></div>
-
-</div>
 
 </body>
 </html>
