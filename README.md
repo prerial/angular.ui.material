@@ -1,4 +1,4 @@
-# Products
+# Material Examples
 
 Angular, NodeJS, ExpressJS and Material.
 
