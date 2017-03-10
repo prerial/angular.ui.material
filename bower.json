@@ -19,7 +19,6 @@
     "a0-angular-storage": "0.0.15",
     "angular-jwt": "0.1.8",
     "sugar": "2.0.4",
-    "bootstrap": "3.3.x",
     "headjs": "1.0.3",
     "jquery-flot": "0.8.3",
     "jquery": "3.1.x"
