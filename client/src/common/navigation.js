@@ -4,13 +4,12 @@
 (function() {
     'use strict';
 
-    angular.module('common') .constant('Navigation',
+    angular.module('common') .constant('Navigation', {
 
-    {
         'Home': {
-        route: '/home',
-            config: {controller: 'uiMaterialAppCtrl', template:'<h2 class="examples-pane">Controllers Home</h2>'}
-    },
+            route: '/home',
+                config: {controller: 'uiMaterialAppCtrl', template:'<h2 class="examples-pane">Examples Home</h2>'}
+        },
         'Autocomplete':
         {
             route: '/autocomplete',
@@ -21,90 +20,85 @@
             route: '/bottom-sheet',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/bottomsheet.html'}
         },
-        'ViewportResizer':
+        'Buttons':
         {
-            route: '/viewport-resizer',
-                config: {controller: 'viewPortResizeCtrl', templateUrl:'partials/viewport-resizer.html'}
+            route: '/buttons',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/buttons.html'}
         },
-        'Notifications':
+        'Cards':
         {
-            route: '/notifications',
-                config: {controller: 'notificationsCtrl', templateUrl:'partials/notifications.html'}
+            route: '/cards',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/cards.html'}
         },
-        'Combobox':
+        'Checkbox':
         {
-            route: '/combobox',
-                config: {controller: 'comboboxCtrl', templateUrl:'partials/combobox.html'}
+            route: '/checkbox',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/checkbox.html'}
         },
-        'Tooltip':
+        'Chips':
         {
-            route: '/tooltip',
-                config: {controller: 'tooltipCtrl', templateUrl:'partials/tooltip.html'}
+            route: '/chips',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/chips.html'}
         },
         'Typeahead':
         {
             route: '/typeahead',
-                config: {controller: 'typeaheadCtrl', templateUrl:'partials/typeahead.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/typeahead.html'}
         },
         'GridTag':
         {
             route: '/gridtag',
-                config: {controller: 'gridtagCtrl', templateUrl:'partials/gridtag.html'}
-        },
-        'Buttons':
-        {
-            route: '/buttons',
-                config: {controller: 'ButtonsCtrl', templateUrl:'partials/buttons.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/gridtag.html'}
         },
         'Form':
         {
             route: '/form',
-                config: {controller: 'FormCtrl', templateUrl:'partials/form.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/form.html'}
         },
         'Form1':
         {
             route: '/form1',
-                config: {controller: 'Form1Ctrl', templateUrl:'partials/form/form1.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/form/form1.html'}
         },
         'Form2':
         {
             route: '/form2',
-                config: {controller: 'Form2Ctrl', templateUrl:'partials/form/form2.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/form/form2.html'}
         },
         'Accordion':
         {
             route: '/accordion',
-                config: {controller: 'AccordionCtrl', templateUrl:'partials/accordion.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/accordion.html'}
         },
         'Tabs':
         {
             route: '/tabs',
-                config: {controller: 'TabsCtrl', templateUrl:'partials/tabs.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/tabs.html'}
         },
         'ContextMenu':
         {
             route: '/context-menu',
-                config: {controller: 'ContextMenuCtrl', templateUrl:'partials/context-menu.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/context-menu.html'}
         },
         'Switch':
         {
             route: '/switch',
-                config: {controller: 'SwitchCtrl', templateUrl:'partials/switch.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/switch.html'}
         },
         'Badge':
         {
             route: '/badge',
-                config: {controller: 'BadgeCtrl', templateUrl:'partials/badge.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/badge.html'}
         },
         'Icons':
         {
             route: '/icons',
-                config: {controller: 'IconsCtrl', templateUrl:'partials/icons.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/icons.html'}
         },
         'Transitions':
         {
             route: '/transitions',
-                config: {controller: 'IconsCtrl', templateUrl:'partials/transitions.html'}
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/transitions.html'}
         }
     });
 
