@@ -17,17 +17,17 @@
         },
         'BottomSheet':
         {
-            route: '/bottom-sheet',
+            route: '/bottomSheet',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/bottomsheet.html'}
         },
         'Buttons':
         {
-            route: '/buttons',
+            route: '/button',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/buttons.html'}
         },
         'Cards':
         {
-            route: '/cards',
+            route: '/card',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/cards.html'}
         },
         'Checkbox':
