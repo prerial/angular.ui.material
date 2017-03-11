@@ -4,6 +4,7 @@
 angular.module('uiMaterial')
     .config(function($mdIconProvider) {
         $mdIconProvider
+            .icon('md-toggle-arrow', 'img/icons/toggle-arrow.svg', 48)
             .icon('share-arrow', 'img/icons/share-arrow.svg', 24)
             .icon('upload', 'img/icons/upload.svg', 24)
             .icon('copy', 'img/icons/copy.svg', 24)
