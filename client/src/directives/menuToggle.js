@@ -12,7 +12,7 @@
             templateUrl: 'client/src/templates/menu-toggle.tmpl.html',
             link: function($scope, $element) {
 
-//                var controller = $element.parent().controller();
+  //              var controller = $element.parent().controller();
 
                 // Used for toggling the visibility of the accordion's content, after
                 // all of the animations are completed. This prevents users from being
@@ -20,11 +20,22 @@
                 $scope.renderContent = false;
 
                 $scope.isOpen = function() {
-    //                return controller.isOpen($scope.section);
+//                    return controller.isOpen($scope.section);
                 };
 
                 $scope.toggle = function() {
-     //               controller.toggleOpen($scope.section);
+                    var $ul = $element.find('ul');
+                    var isOpen = $ul.attr('isOpen');
+                    if(isOpen === 'true'){
+                        $ul.css('height',0).css('visibility','hidden');
+                        $ul.attr('isOpen', 'false');
+                    }else{
+                        var liarr = $ul.find('li');
+                        var hgt = liarr.length * liarr[0].clientHeight;
+                        $ul.css('height',hgt + 'px').css('visibility','visible');
+                        $ul.attr('isOpen', 'true');
+                    }
+//                    controller.toggleOpen($scope.section);
                 };
     /*
                 $mdUtil.nextTick(function() {
