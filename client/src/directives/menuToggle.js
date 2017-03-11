@@ -3,7 +3,7 @@
  */
 
     angular.module('uiMaterial')
-        .directive('menuToggle', function() {
+        .directive('menuToggle',['$mdUtil', '$$rAF', '$animateCss', function($mdUtil, $$rAF, $animateCss) {
 
         return {
             scope: {
@@ -12,7 +12,7 @@
             templateUrl: 'client/src/templates/menu-toggle.tmpl.html',
             link: function($scope, $element) {
 
-  //              var controller = $element.parent().controller();
+                var controller = $element.parent().controller();
 
                 // Used for toggling the visibility of the accordion's content, after
                 // all of the animations are completed. This prevents users from being
@@ -20,10 +20,11 @@
                 $scope.renderContent = false;
 
                 $scope.isOpen = function() {
-//                    return controller.isOpen($scope.section);
+                    return controller.isOpen($scope.section);
                 };
 
                 $scope.toggle = function() {
+/*
                     var $ul = $element.find('ul');
                     var isOpen = $ul.attr('isOpen');
                     if(isOpen === 'true'){
@@ -35,9 +36,10 @@
                         $ul.css('height',hgt + 'px').css('visibility','visible');
                         $ul.attr('isOpen', 'true');
                     }
-//                    controller.toggleOpen($scope.section);
+*/
+                    controller.toggleOpen($scope.section);
                 };
-    /*
+
                 $mdUtil.nextTick(function() {
                     $scope.$watch(function () {
                         return controller.isOpen($scope.section);
@@ -77,12 +79,12 @@
                         });
                     });
                 });
-    */
+
                 var parentNode = $element[0].parentNode.parentNode.parentNode;
                 if(parentNode.classList.contains('parent-list-item')) {
                     var heading = parentNode.querySelector('h2');
                     $element[0].firstChild.setAttribute('aria-describedby', heading.id);
                 }
             }
-    };
-});
+    }
+}]);

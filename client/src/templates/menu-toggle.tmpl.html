@@ -1,6 +1,6 @@
 <md-button class="md-button-toggle"
            ng-click="toggle()"
-           aria-controls="docs-menu-{{section.name}}"
+           aria-controls="docs-menu-{{section.name | nospace}}"
            aria-expanded="{{isOpen()}}">
     <div flex layout="row">
         {{section.name}}
@@ -15,7 +15,7 @@
   </span>
 </md-button>
 
-<ul id="docs-menu-{{section.name}}" isOpen="false"
+<ul id="docs-menu-{{section.name | nospace}}" isOpen="false"
     class="menu-toggle-list"
     aria-hidden="{{!renderContent}}"
     ng-style="{ visibility: renderContent ? 'visible' : 'hidden' }">
@@ -24,5 +24,3 @@
         <menu-link section="page"></menu-link>
     </li>
 </ul>
-
-
