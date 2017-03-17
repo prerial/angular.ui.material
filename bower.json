@@ -1,8 +1,8 @@
 {
-  "name": "angular-mongoose-products",
+  "name": "angular-ui-material",
   "description": "A starter project for AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/prerial/angular.mongoose.products.git",
+  "homepage": "https://github.com/prerial/angular.ui.material.git",
   "license": "MIT",
   "private": true,
   "directory":"target/",
