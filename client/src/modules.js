@@ -49,10 +49,10 @@
                 {name:"Browser Colors",outputPath:"partials/Theming/06_browser_color.html",url:"/Theming/06_browser_color",label:"Browser Colors"}
             ]
         })
-        .config( ['$routeProvider', 'Navigation', 'DEMOS', function($routeProvider, navigation, demos ) {
+        .config( ['$locationProvider', '$routeProvider', 'Navigation', 'DEMOS', function($locationProvider, $routeProvider, navigation, demos ) {
+            $locationProvider.hashPrefix('');
             var array = demos;
             $routeProvider
-
                 .when(navigation['Home'].route, navigation['Home'].config)
                 .when(navigation['Autocomplete'].route, navigation['Autocomplete'].config)
                 .when(navigation['BottomSheet'].route, navigation['BottomSheet'].config)
