@@ -60,6 +60,7 @@
                 .when(navigation['Cards'].route, navigation['Cards'].config)
                 .when(navigation['Checkbox'].route, navigation['Checkbox'].config)
                 .when(navigation['Chips'].route, navigation['Chips'].config)
+                .when(navigation['Icons'].route, navigation['Icons'].config)
 /*
                 .when(navigation['ViewportResizer'].route, navigation['ViewportResizer'].config)
                 .when(navigation['Notifications'].route, navigation['Notifications'].config)
