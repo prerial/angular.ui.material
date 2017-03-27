@@ -40,6 +40,11 @@
             route: '/chips',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/chips.html'}
         },
+        'Icons':
+        {
+            route: '/icons',
+            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/icons.html'}
+        },
         'Typeahead':
         {
             route: '/typeahead',
@@ -89,11 +94,6 @@
         {
             route: '/badge',
             config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/badge.html'}
-        },
-        'Icons':
-        {
-            route: '/icons',
-            config: {controller: 'uiMaterialAppCtrl', templateUrl:'partials/icons.html'}
         },
         'Transitions':
         {
